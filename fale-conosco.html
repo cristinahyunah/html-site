@@ -4,9 +4,18 @@
     <title>Tudo sobre Google Glass </title>
     <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
     <link rel="stylesheet" type="text/css" href="_css/form.css"/>
+    <script language="javascript"src="_javascript/funcoes.js"> </Script>
+    <script>
+        function calc_total () {
+            var qtd = parseInt(document.getElementById('cQtd').value);
+            tot= qtd* 1500;
+            document.getElementById ('cTot').value= tot;
+        }
+    </script>
 
 </head>
-<script language="javascript"src="_javascript/funcoes.js"> </Script>
+
+  
 <body>
 <div id= "interface">
     <header id= "cabecalho">
@@ -42,7 +51,7 @@
         </header>
 
 
-<form method="POST" id="fContato" action="mailto:contato@cursoemvideo.com">
+<form method="POST" id="fContato" action="mailto:contato@cursoemvideo.com" oninput="calc_total();">
     
 <fieldset id="usuario"><legend>Identificação do Usuário</legend> 
     <p><label for="cNome">Nome:<input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"></p>
